@@ -18,7 +18,6 @@ develop-eggs/
 dist/
 downloads/
 eggs/
-test/
 env/
 model/
 .eggs/
