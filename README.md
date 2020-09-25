@@ -72,12 +72,13 @@
 	如果直接使用mask_rcnn_inception_v2_coco.config 会报错。
 	
 
-预训练模型下载地址：https://cloud.189.cn/t/fqemu2FrAjIr
+预训练模型下载地址：https://cloud.189.cn/t/fqemu2FrAjIr  
+注意，该模型并没有充分训练，仅供测试。
 
-15. 测试结果
+测试结果
 ![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_0064_box.jpg)  
 ![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_0155_box.jpg)  
 ![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_0667_box.jpg)
 
-注意，该模型并没有充分训练，仅供测试。
+
 	
