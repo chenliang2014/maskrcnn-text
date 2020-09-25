@@ -9,9 +9,6 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-pre-trained-model/
-maskrcnn-text-detect/
-training/
 eval/
 .vscode/
 develop-eggs/
