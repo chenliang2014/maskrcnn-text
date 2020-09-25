@@ -14,14 +14,9 @@
 
 2. 安装Labelme 标注工具，见https://github.com/wkentaro/labelme
 
-3. 创建项目目录： 
-mask-text
-	annotations
-	images
-		train
-		test
-	maskrcnn-text-detect
-	pre-trained-model
+3. 创建项目子目录： 
+	maskrcnn-text-detect,
+	pre-trained-model,
 	training
 	
     
