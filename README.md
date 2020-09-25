@@ -79,6 +79,8 @@
 ![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_0064_box.jpg)  
 ![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_0155_box.jpg)  
 ![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_0667_box.jpg)
+![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_0742_box.jpg)
+![image](https://github.com/chenliang2014/maskrcnn-text/blob/master/IMG_1811_box.jpg)
 
 
 	
