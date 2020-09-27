@@ -23,18 +23,22 @@
 	
 
 4. 进入mask-text目录，执行一下命令生成coco文件到annotations目录下：  
+```
 	python labelme2coco.py images\train --output annotations\train.json  
 	python labelme2coco.py images\test --output annotations\test.json  
-	
+```	
 5. 生成tfrecord文件：  
+```
 	python create_coco_tf_record.py --logtostderr --train_image_dir=images\train --train_annotations_file=annotations\train.json --test_image_dir=images\test --test_annotations_file=annotations\test.json --output_dir=annotations  --include_masks=True  
-	
+```
+
 6. 在annotations目录下创建一个文本文件label_map.pbtxt,内容为：  
-	item {  
+```
+   item {  
 		  id: 1  
 		  name: 'txt'  
 	}  
-
+```
 
 
 7. 下载 mask_rcnn_inception_v2(http://download.tensorflow.org/models/object_detection/mask_rcnn_inception_v2_coco_2018_01_28.tar.gz) 压缩包并解压到pre_trained_model。 
@@ -51,23 +55,29 @@
 	
 
 10. 训练模型：
+```
 	python train.py --logtostderr --train_dir=training/ --pipeline_config_path=pre-trained-model/mask_rcnn_inception_v2_coco.config
-	
+```	
 11. 查看训练情况：
+```
 	tensorboard --logdir=training
-	
+```	
 12. 输出训练模型：  
+```
 	python export_inference_graph.py --input_type image_tensor --pipeline_config_path=pre-trained-model/mask_rcnn_inception_v2_coco.config --trained_checkpoint_prefix training/model.ckpt-xxxxx --output_directory  maskrcnn-text-detect
-	
+```
+
 13. 测试模型：
-	python object-detection-test.py images/test/IMG_0667.JPG
-	
+```
+python object-detection-test.py images/test/IMG_0667.JPG
+```	
 	测试结果会保存到当前目录下IMG_0667_box.jpg， 深绿色为包围矩形框，红色为最小包围框，利用红色框可以得到文字方向。
 	
 	
 14. 如果要在opencv的dnn中运行模型，需要先执行：
+```	
 	python tf_text_graph_mask_rcnn.py --input maskrcnn-text-detect/frozen_inference_graph.pb  --config pre-trained-model/mask_rcnn_inception_v2_coco.config --output maskrcnn-text.phtxt
-	
+```	
 	将maskrcnn-text.phtxt作为配置文件传给python mask_rcnn.py 的--config 参数。
 	如果直接使用mask_rcnn_inception_v2_coco.config 会报错。
 	
